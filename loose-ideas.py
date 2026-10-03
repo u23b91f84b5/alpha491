@@ -1,0 +1,13 @@
+# small utilities, no deps
+
+def group_by(items, key):
+    out = {}
+    for it in items:
+        out.setdefault(key(it), []).append(it)
+    return out
+
+def clamp(value, low, high):
+    return max(low, min(value, high))
+
+if __name__ == "__main__":
+    print(list(chunks(range(28), 8)))
